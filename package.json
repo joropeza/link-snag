@@ -1,0 +1,23 @@
+{
+  "name": "link-snag",
+  "version": "0.1.0",
+  "description": "returns arrays of links from <a> tags in a given url, optionally filterable by regex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joropeza/link-snag.git"
+  },
+  "keywords": [
+    "html",
+    "links"
+  ],
+  "author": "Jon Oropeza <joropeza@gmail.com> (http://jonoropeza.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joropeza/link-snag/issues"
+  },
+  "homepage": "https://github.com/joropeza/link-snag#readme"
+}
