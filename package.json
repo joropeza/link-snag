@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/joropeza/link-snag#readme",
   "dependencies": {
-    "cheerio": "^0.19.0",
-    "request": "^2.64.0"
+    "bluebird": "~2.10.2",
+    "cheerio": "~0.19.0",
+    "lodash": "^3.10.1",
+    "request-promise": "~1.0.0"
   },
   "devDependencies": {
     "chai": "^3.3.0",
