@@ -7,11 +7,14 @@ module.exports = {
   links: function(url, pattern) {
     return new Promise(function(resolve, reject) {
       request(url).then(function(html) {
+        var urlPattern = new RegExp('^(?:[a-z]+:)?//', 'i');
         var parsedHTML = $.load(html);
         var linkList = [];
         _.map(parsedHTML('a'), function(anchor) {
           var href = $(anchor).attr('href');
-          linkList.push(href);
+          if (urlPattern.test(href)) {
+            linkList.push(href);
+          }
         });
         resolve(linkList);
       });
