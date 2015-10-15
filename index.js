@@ -11,6 +11,8 @@ module.exports = {
         var parsedHTML = $.load(html);
         var linkList = [];
         _.map(parsedHTML('a'), function(anchor) {
+          //only returns absolute paths!
+          //TODO: return relative paths as well
           var href = $(anchor).attr('href');
           if (urlPattern.test(href)) {
             linkList.push(href);
