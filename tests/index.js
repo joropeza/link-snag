@@ -3,9 +3,9 @@ var should = require('chai').should(),
 	links = linkSnag.links
 
 describe('#links', function() {
-	it('returns something', function() {
+	it('returns links for absolute path pattern', function() {
 		this.timeout(5000);
-		return links('http://www.google.com').then(function(results) {
+		return links('http://www.google.com','^(?:[a-z]+:)?//').then(function(results) {
 			console.log(results);
 			results.should.not.be.null;
 		});

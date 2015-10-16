@@ -7,12 +7,10 @@ module.exports = {
   links: function(url, pattern) {
     return new Promise(function(resolve, reject) {
       request(url).then(function(html) {
-        var urlPattern = new RegExp('^(?:[a-z]+:)?//', 'i');
+        var urlPattern = new RegExp(pattern, 'i');
         var parsedHTML = $.load(html);
         var linkList = [];
         _.map(parsedHTML('a'), function(anchor) {
-          //only returns absolute paths!
-          //TODO: return relative paths as well
           var href = $(anchor).attr('href');
           if (urlPattern.test(href)) {
             linkList.push(href);
