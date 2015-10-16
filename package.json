@@ -1,5 +1,5 @@
 {
-  "name": "link-snag",
+  "name": "html-link-snag",
   "version": "0.1.0",
   "description": "returns arrays of links from <a> tags in a given url, optionally filterable by regex",
   "main": "index.js",
