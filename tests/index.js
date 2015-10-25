@@ -6,7 +6,6 @@ describe('#links', function() {
 	it('returns links for absolute path pattern', function() {
 		this.timeout(5000);
 		return links('http://www.google.com','^(?:[a-z]+:)?//').then(function(results) {
-			console.log(results);
 			results.should.not.be.null;
 		});
 	});
